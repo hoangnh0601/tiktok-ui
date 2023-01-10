@@ -1,26 +1,31 @@
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
+import ICONS from '~/constant/Icons';
+import Image from '../Image';
 import styles from './AccoutItem.module.scss';
 
 const cx = classNames.bind(styles);
-function AccoutItem() {
+function AccoutItem({ avatar, fullName, isCheck, nickname }) {
   return (
-    <div className={cx('wrapper')}>
-      <img
-        className={cx('avatar')}
-        src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/e99846f00ab6702d7716ba8d72a98d7a~c5_300x300.webp?x-expires=1652976000&x-signature=NQ1d3DGeXuiWJp9%2BOtjwLIZwePM%3D"
-        alt="Hoang"
-      />
+    <Link to={`@${nickname}`} className={cx('wrapper')}>
+      <Image className={cx('avatar')} src={avatar} alt={fullName} />
       <div className={cx('info')}>
-        <h4 className={cx('name')}>
-          <span> Nguyen Huu Hoang</span>
-          <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+        <h4 className={cx('user-name')}>
+          <span>{nickname}</span>
+          {isCheck && <ICONS.Check />}
         </h4>
-        <span className={'username'}>nguyenhuuhoang</span>
+        <span className={cx('name')}>{fullName}</span>
       </div>
-    </div>
+    </Link>
   );
 }
+
+AccoutItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
+  isCheck: PropTypes.bool.isRequired,
+  nickname: PropTypes.string.isRequired,
+};
 
 export default AccoutItem;

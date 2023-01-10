@@ -10,7 +10,6 @@ function App() {
             const Layout = route.layout ? route.layout : Fragment;
 
             const Page = route.components;
-
             return (
               <Route
                 key={index}

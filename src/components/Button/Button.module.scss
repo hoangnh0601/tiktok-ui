@@ -3,11 +3,12 @@
   align-items: center;
   justify-content: center;
   padding: 9px 16px;
-  min-width: 100px;
+  min-width: 110px;
   border-radius: 4px;
   border: 1px solid transparent;
+  font-family: 'ProximaNova';
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--white);
   cursor: pointer;
 
@@ -28,14 +29,14 @@
 }
 
 .icon {
-  display: inline-block;
+  display: flex;
   width: 24 px;
   text-align: center;
 }
 
 // Button types
 .rounded {
-  border: 1px solid rgba(22, 24, 35, 0.12);
+  border: 1px solid var(--border-gray-color);
   border-radius: 999px;
   background-color: var(--white);
   box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
