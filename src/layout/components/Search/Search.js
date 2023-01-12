@@ -15,7 +15,7 @@ const cx = classNames.bind(styles);
 function Search() {
   const [searchValue, setSearchValue] = useState('');
   const [searchResult, setSearchResult] = useState([]);
-  const [isInteraction, setIsInteraction] = useState(true);
+  const [isInteraction, setIsInteraction] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const inputRef = useRef();
