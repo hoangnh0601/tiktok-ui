@@ -22,7 +22,8 @@
   justify-content: space-between;
   height: 100%;
   width: var(--default--layout-width, 1150px);
-  padding: 0 var(--default--layout-horizontal);
+  padding: 0 var(--default--layout-horizontal-right) 0
+    var(--default--layout-horizontal-left);
 }
 
 .logo {
@@ -42,16 +43,6 @@
   padding: 4px 8px;
   background-color: transparent;
   cursor: pointer;
-}
-
-.btn-upload {
-  color: inherit;
-  border-color: var(--border-gray-color);
-
-  &:hover {
-    background-color: var(--background-hover-color);
-    border-color: var(--border-gray-color);
-  }
 }
 
 .btn-action {

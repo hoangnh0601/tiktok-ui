@@ -7,6 +7,7 @@ const routes = {
   coin: '/coin',
   studio: '/studio',
   setting: '/setting',
+  live: '/live',
 };
 
 export default routes;

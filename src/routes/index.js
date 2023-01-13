@@ -10,6 +10,7 @@ import Studio from '~/pages/Studio';
 import Setting from '~/pages/Setting';
 
 import routes from '~/config/routes';
+import Live from '~/pages/Live';
 
 //Public routes
 const publicRoutes = [
@@ -21,6 +22,7 @@ const publicRoutes = [
   { path: routes.studio, components: Studio, layout: HeaderOnly },
   { path: routes.setting, components: Setting, layout: HeaderOnly },
   { path: routes.search, components: Search, layout: null },
+  { path: routes.live, components: Live, layout: DefaultLayout },
 ];
 
 const privateRoutes = [];

@@ -12,6 +12,7 @@ function Button({
   rounded,
   primary = false,
   outline = false,
+  outlineGray,
   children,
   small = false,
   large = false,
@@ -50,6 +51,7 @@ function Button({
     text,
     large,
     disabled,
+    ['outline-gray']: outlineGray,
   });
 
   return (
