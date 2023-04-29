@@ -1,58 +1,58 @@
-import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import HeadlessTippy from '@tippyjs/react/headless';
-import classNames from 'classnames/bind';
-import { useEffect, useRef, useState } from 'react';
+import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import HeadlessTippy from '@tippyjs/react/headless'
+import classNames from 'classnames/bind'
+import { useEffect, useRef, useState } from 'react'
 
-import search from '~/api/searchAPI';
-import AccountItem from '~/components/AccountItem';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import ICONS from '~/constant/Icons';
-import { useDebounce } from '~/hooks';
-import styles from './Search.module.scss';
+import search from '~/api/searchAPI'
+import AccountItem from '~/components/AccountItem'
+import { Wrapper as PopperWrapper } from '~/components/Popper'
+import ICONS from '~/constant/Icons'
+import { useDebounce } from '~/hooks'
+import styles from './Search.module.scss'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 function Search() {
-  const [searchValue, setSearchValue] = useState('');
-  const [searchResult, setSearchResult] = useState([]);
-  const [isInteraction, setIsInteraction] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [searchValue, setSearchValue] = useState('')
+  const [searchResult, setSearchResult] = useState([])
+  const [isInteraction, setIsInteraction] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
-  const inputRef = useRef();
+  const inputRef = useRef()
 
-  const debounced = useDebounce(searchValue, 500);
+  const debounced = useDebounce(searchValue, 500)
 
   useEffect(() => {
     if (!debounced.trim()) {
-      setSearchResult([]);
-      return;
+      setSearchResult([])
+      return
     }
 
     const fetchAPI = async () => {
-      setIsLoading(true);
-      const res = await search(debounced);
-      setSearchResult(res);
-      setIsLoading(false);
-    };
+      setIsLoading(true)
+      const res = await search(debounced)
+      setSearchResult(res)
+      setIsLoading(false)
+    }
 
-    fetchAPI();
-  }, [debounced]);
+    fetchAPI()
+  }, [debounced])
 
   const handleOnChange = (e) => {
-    const searchValue = e.target.value;
+    const searchValue = e.target.value
 
-    if (!searchValue.startsWith(' ')) setSearchValue(searchValue);
-  };
+    if (!searchValue.startsWith(' ')) setSearchValue(searchValue)
+  }
 
   const handleOnClear = () => {
-    setSearchValue('');
-    setSearchResult([]);
-    inputRef.current.focus();
-  };
+    setSearchValue('')
+    setSearchResult([])
+    inputRef.current.focus()
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   return (
     // <div></div> for fix warning Tippy
@@ -108,7 +108,7 @@ function Search() {
         </div>
       </HeadlessTippy>
     </div>
-  );
+  )
 }
 
-export default Search;
+export default Search

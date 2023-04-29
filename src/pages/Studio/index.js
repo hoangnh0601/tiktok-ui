@@ -1,5 +1,5 @@
 function Studio() {
-  return <h2>Studio</h2>;
+  return <h2>Studio</h2>
 }
 
-export default Studio;
+export default Studio

@@ -1,8 +1,8 @@
-import Header from '~/layout/components/Header';
-import style from './HeaderOnly.module.scss';
-import classNames from 'classnames/bind';
+import Header from '~/layout/components/Header'
+import style from './HeaderOnly.module.scss'
+import classNames from 'classnames/bind'
 
-const cx = classNames.bind(style);
+const cx = classNames.bind(style)
 
 function HeaderOnly({ children }) {
   return (
@@ -12,7 +12,7 @@ function HeaderOnly({ children }) {
         <div className={cx('content')}>{children}</div>
       </div>
     </div>
-  );
+  )
 }
 
-export default HeaderOnly;
+export default HeaderOnly

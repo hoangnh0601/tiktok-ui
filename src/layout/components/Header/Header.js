@@ -1,20 +1,20 @@
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
-import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'
+import classNames from 'classnames/bind'
+import { Link } from 'react-router-dom'
 
-import images from '~/assets/images';
-import ICONS from '~/constant/Icons';
-import Button from '~/components/Button';
-import styles from '~/layout/components/Header/Header.module.scss';
-import Menu from '~/components/Popper/Menu';
-import Image from '~/components/Image';
-import Search from '../Search';
+import images from '~/assets/images'
+import ICONS from '~/constant/Icons'
+import Button from '~/components/Button'
+import styles from '~/layout/components/Header/Header.module.scss'
+import Menu from '~/components/Popper/Menu'
+import Image from '~/components/Image'
+import Search from '../Search'
 
-const cx = classNames.bind(styles);
-const currentUser = true;
+const cx = classNames.bind(styles)
+const currentUser = true
 
 const MENU_ITEMS = [
   {
@@ -47,7 +47,7 @@ const MENU_ITEMS = [
     icon: <ICONS.HalfMoon />,
     title: 'Dark mode',
   },
-];
+]
 
 function Header() {
   const userMenu = [
@@ -78,16 +78,16 @@ function Header() {
       to: '/logout',
       separate: true,
     },
-  ];
+  ]
 
   const handleMenuChange = (menuItem) => {
     switch (menuItem.type) {
       case 'language':
         // Handle change language
-        break;
+        break
       default:
     }
-  };
+  }
 
   return (
     <header className={cx('wrapper')}>
@@ -140,7 +140,7 @@ function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

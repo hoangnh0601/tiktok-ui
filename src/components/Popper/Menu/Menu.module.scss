@@ -21,11 +21,11 @@
   font-weight: 500;
 
   &.separate {
-    border-top: 1px solid rgba(22, 24, 35, 0.12);
+    border-top: 1px solid var(--border-gray-color);
   }
 
   &:hover {
-    background-color: rgba(22, 24, 35, 0.03);
+    background-color: var(--background-hover-color);
   }
 
   .title:only-child {

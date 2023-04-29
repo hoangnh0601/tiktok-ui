@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
-import ICONS from '~/constant/Icons';
-import Image from '../Image';
-import styles from './AccoutItem.module.scss';
+import PropTypes from 'prop-types'
+import classNames from 'classnames/bind'
+import { Link } from 'react-router-dom'
+import ICONS from '~/constant/Icons'
+import Image from '../Image'
+import styles from './AccoutItem.module.scss'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 function AccountItem({ avatar, fullName, isCheck, nickname }) {
   return (
     <Link to={`@${nickname}`} className={cx('wrapper')}>
@@ -18,7 +18,7 @@ function AccountItem({ avatar, fullName, isCheck, nickname }) {
         <span className={cx('name')}>{fullName}</span>
       </div>
     </Link>
-  );
+  )
 }
 
 AccountItem.propTypes = {
@@ -26,6 +26,6 @@ AccountItem.propTypes = {
   fullName: PropTypes.string.isRequired,
   isCheck: PropTypes.bool.isRequired,
   nickname: PropTypes.string.isRequired,
-};
+}
 
-export default AccountItem;
+export default AccountItem

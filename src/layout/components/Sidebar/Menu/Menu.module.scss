@@ -1,3 +1,6 @@
+.wrapper {
+  margin-bottom: 8px;
+}
 .menu-items {
   display: flex;
   align-items: center;
@@ -20,11 +23,11 @@
   }
 
   &:hover {
-    background-color: rgba(22, 24, 35, 0.03);
+    background-color: var(--background-hover-color);
   }
 
   &:active {
-    background-color: rgba(22, 24, 35, 0.06);
+    background-color: var(--background-active-color);
   }
 }
 

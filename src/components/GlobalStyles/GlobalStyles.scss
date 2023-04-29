@@ -2,12 +2,14 @@
 
 :root {
   --primary: #fe2c55;
+  --primary-blur: #fe2c550f;
   --black: #000;
   --white: #fff;
   --text-color: #161823;
-  --sub-title-color: rgba(22, 24, 35, 0.5);
-  --border-gray-color: rgba(22, 24, 35, 0.12);
-  --background-hover-color: rgba(22, 24, 35, 0.03);
+  --sub-title-color: #161823bf;
+  --border-gray-color: #1618231f;
+  --background-hover-color: #16182308;
+  --background-active-color: #1618230f;
 
   --font-family: 'ProximaNova', sans-serif;
 
@@ -35,6 +37,8 @@ body {
   text-rendering: optimizeSpeed;
   color: var(--text-color);
   overflow-y: overlay;
+  -webkit-font-smoothing: antialiased;
+  text-decoration-thickness: auto;
 }
 
 button,

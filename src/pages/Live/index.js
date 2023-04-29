@@ -1,5 +1,5 @@
 function Live() {
-  return <h2>Live</h2>;
+  return <h2>Live</h2>
 }
 
-export default Live;
+export default Live

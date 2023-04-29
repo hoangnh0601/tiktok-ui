@@ -1,16 +1,16 @@
-import { HeaderOnly, DefaultLayout } from '~/layout';
+import { HeaderOnly, DefaultLayout } from '~/layout'
 
-import Home from '~/pages/Home';
-import Following from '~/pages/Following';
-import Profile from '~/pages/Profile';
-import Upload from '~/pages/Upload';
-import Search from '~/pages/Search';
-import Coin from '~/pages/Coin';
-import Studio from '~/pages/Studio';
-import Setting from '~/pages/Setting';
+import Home from '~/pages/Home'
+import Following from '~/pages/Following'
+import Profile from '~/pages/Profile'
+import Upload from '~/pages/Upload'
+import Search from '~/pages/Search'
+import Coin from '~/pages/Coin'
+import Studio from '~/pages/Studio'
+import Setting from '~/pages/Setting'
 
-import routes from '~/config/routes';
-import Live from '~/pages/Live';
+import routes from '~/config/routes'
+import Live from '~/pages/Live'
 
 //Public routes
 const publicRoutes = [
@@ -23,8 +23,8 @@ const publicRoutes = [
   { path: routes.setting, components: Setting, layout: HeaderOnly },
   { path: routes.search, components: Search, layout: null },
   { path: routes.live, components: Live, layout: DefaultLayout },
-];
+]
 
-const privateRoutes = [];
+const privateRoutes = []
 
-export { publicRoutes, privateRoutes };
+export { publicRoutes, privateRoutes }

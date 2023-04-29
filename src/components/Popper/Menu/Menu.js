@@ -1,35 +1,35 @@
-import PropTypes from 'prop-types';
-import Tippy from '@tippyjs/react/headless';
-import { useState } from 'react';
+import PropTypes from 'prop-types'
+import Tippy from '@tippyjs/react/headless'
+import { useState } from 'react'
 
-import classNames from 'classnames/bind';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import styles from './Menu.module.scss';
-import MenuItems from './MenuItems';
-import Header from './Header';
+import classNames from 'classnames/bind'
+import { Wrapper as PopperWrapper } from '~/components/Popper'
+import styles from './Menu.module.scss'
+import MenuItems from './MenuItems'
+import Header from './Header'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 function Menu({ children, items, hideOnClick = false, onChange }) {
-  const [history, setHistory] = useState([{ data: items }]);
+  const [history, setHistory] = useState([{ data: items }])
 
-  const current = history[history.length - 1];
+  const current = history[history.length - 1]
 
   const renderItems = () => {
     return current.data.map((item, index) => {
-      const hasChildren = !!item.children;
+      const hasChildren = !!item.children
       return (
         <MenuItems
           key={index}
           data={item}
           onClick={() => {
-            if (hasChildren) setHistory((prev) => [...prev, item.children]);
-            else onChange && onChange(item);
+            if (hasChildren) setHistory((prev) => [...prev, item.children])
+            else onChange && onChange(item)
           }}
         />
-      );
-    });
-  };
+      )
+    })
+  }
 
   const handleRender = (attrs) => (
     <div className={cx('menu-wrapper')} tabIndex="-1" {...attrs}>
@@ -40,10 +40,10 @@ function Menu({ children, items, hideOnClick = false, onChange }) {
         <div className={cx('menu-body')}>{renderItems()}</div>
       </PopperWrapper>
     </div>
-  );
+  )
 
-  const handleBack = () => setHistory((prev) => prev.slice(0, prev.length - 1));
-  const handleReset = () => setHistory((prev) => prev.slice(0, 1));
+  const handleBack = () => setHistory((prev) => prev.slice(0, prev.length - 1))
+  const handleReset = () => setHistory((prev) => prev.slice(0, 1))
   return (
     <Tippy
       // visible
@@ -57,12 +57,12 @@ function Menu({ children, items, hideOnClick = false, onChange }) {
     >
       <span>{children}</span>
     </Tippy>
-  );
+  )
 }
 Menu.propTypes = {
   children: PropTypes.node.isRequired,
   items: PropTypes.array.isRequired,
   hideOnClick: PropTypes.bool,
   onChange: PropTypes.func,
-};
-export default Menu;
+}
+export default Menu

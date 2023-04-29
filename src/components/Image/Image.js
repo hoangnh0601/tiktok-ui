@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import { forwardRef, useState } from 'react';
-import classNames from 'classnames/bind';
-import styles from './Image.module.scss';
+import PropTypes from 'prop-types'
+import { forwardRef, useState } from 'react'
+import classNames from 'classnames/bind'
+import styles from './Image.module.scss'
 
-import images from '~/assets/images/index';
+import images from '~/assets/images/index'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 const Image = forwardRef(
   (
@@ -18,11 +18,11 @@ const Image = forwardRef(
     },
     ref,
   ) => {
-    const [fallBack, setFallback] = useState();
+    const [fallBack, setFallback] = useState()
 
     const handleError = () => {
-      setFallback(customFallBack);
-    };
+      setFallback(customFallBack)
+    }
 
     return (
       <img
@@ -33,15 +33,15 @@ const Image = forwardRef(
         onError={handleError}
         {...props}
       />
-    );
+    )
   },
-);
+)
 
 Image.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   className: PropTypes.string,
   fallBack: PropTypes.string,
-};
+}
 
-export default Image;
+export default Image

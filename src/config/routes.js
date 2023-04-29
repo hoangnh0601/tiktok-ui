@@ -8,6 +8,6 @@ const routes = {
   studio: '/studio',
   setting: '/setting',
   live: '/live',
-};
+}
 
-export default routes;
+export default routes

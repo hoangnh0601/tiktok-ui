@@ -1,10 +1,11 @@
-import classNames from 'classnames/bind';
-import config from '~/config';
-import ICONS from '~/constant/Icons';
-import Menu, { MenuItem } from './Menu';
-import styles from './Sidebar.module.scss';
+import classNames from 'classnames/bind'
+import config from '~/config'
+import ICONS from '~/constant/Icons'
+import Accounts from './Accounts'
+import Menu, { MenuItem } from './Menu'
+import styles from './Sidebar.module.scss'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 function Sidebar() {
   return (
@@ -25,12 +26,15 @@ function Sidebar() {
         <MenuItem
           title="LIVE"
           to={config.routes.live}
-          icon={<ICONS.Camera height={32} width={32} />}
+          icon={<ICONS.CameraLarge height={32} width={32} />}
           activeIcon={<ICONS.CameraSolid height={32} width={32} />}
         />
       </Menu>
+
+      <Accounts title="Suggested accounts" />
+      <Accounts title="Following accounts" />
     </aside>
-  );
+  )
 }
 
-export default Sidebar;
+export default Sidebar
