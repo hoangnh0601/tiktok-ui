@@ -1,16 +1,16 @@
-import { HeaderOnly, DefaultLayout } from '~/layout'
+import { DefaultLayout, HeaderOnly } from '~/layout'
 
-import Home from '~/pages/Home'
-import Following from '~/pages/Following'
-import Profile from '~/pages/Profile'
-import Upload from '~/pages/Upload'
-import Search from '~/pages/Search'
 import Coin from '~/pages/Coin'
-import Studio from '~/pages/Studio'
+import Following from '~/pages/Following'
+import Home from '~/pages/Home'
+import Live from '~/pages/Live'
+import Profile from '~/pages/Profile'
+import Search from '~/pages/Search'
 import Setting from '~/pages/Setting'
+import Studio from '~/pages/Studio'
+import Upload from '~/pages/Upload'
 
 import routes from '~/config/routes'
-import Live from '~/pages/Live'
 
 //Public routes
 const publicRoutes = [
@@ -27,4 +27,4 @@ const publicRoutes = [
 
 const privateRoutes = []
 
-export { publicRoutes, privateRoutes }
+export { privateRoutes, publicRoutes }

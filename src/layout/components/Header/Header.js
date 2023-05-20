@@ -1,17 +1,18 @@
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Tippy from '@tippyjs/react'
-import 'tippy.js/dist/tippy.css'
 import classNames from 'classnames/bind'
 import { Link } from 'react-router-dom'
+import 'tippy.js/dist/tippy.css'
+
+import Button from '~/components/Button'
+import Image from '~/components/Image'
+import Menu from '~/components/Popper/Menu'
+import ICONS from '~/constant/Icons'
+import Search from '../Search'
 
 import images from '~/assets/images'
-import ICONS from '~/constant/Icons'
-import Button from '~/components/Button'
 import styles from '~/layout/components/Header/Header.module.scss'
-import Menu from '~/components/Popper/Menu'
-import Image from '~/components/Image'
-import Search from '../Search'
 
 const cx = classNames.bind(styles)
 const currentUser = true

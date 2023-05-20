@@ -3,8 +3,8 @@ import classNames from 'classnames/bind'
 import Button from '~/components/Button/Button'
 import Image from '~/components/Image'
 import { Wrapper as PopperWrapper } from '~/components/Popper'
-import styles from './PreviewAccount.module.scss'
 import ICONS from '~/constant/Icons'
+import styles from './PreviewAccount.module.scss'
 
 const cx = classNames.bind(styles)
 function PreviewAccount({ avatar, nickname, name, attrs }) {
